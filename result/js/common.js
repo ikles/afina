@@ -88,35 +88,32 @@ else {
 
 
 
-let timerId = setInterval(() => $('.slider-3').css('transform', 'translateX(-1px)'), 1000);
 
 
-$('.slider-1').slick({
+$('.projects__row').slick({
   infinite: true,    
-  speed: 6900,
+  speed: 400,
   slidesToScroll: 1,
   autoplay: true,    
   slidesToShow: 4,
   cssEase: 'linear',
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 0,  
-  arrows: false,
-  pauseOnHover: true,  
+  arrows: true,  
 });
 
-$('.slider-2').slick({
+$('.reviews__slider').slick({
   infinite: true,    
-  speed: 6900,
+  speed: 400,
   slidesToScroll: 1,
   autoplay: true,    
-  slidesToShow: 4,
+  slidesToShow: 3,
   cssEase: 'linear',
-  autoplay: true,
-  autoplaySpeed: 0,
-  rtl: true ,
-  arrows: false,
-  pauseOnHover: true,
-})
+  autoplay: false,
+  autoplaySpeed: 0,  
+  arrows: true,  
+});
+
 
 
 /************************************/
