@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Отзывы</title>  
+  @@include('var/_styless.html')
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')
+    <main class="main">
+
+      <div class="reviews-page content">
+        <div class="contain">
+          <h1 class="h1">ОТЗЫВЫ</h1>
+          <div class="reviews__list">
+            <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Екатерина Романова",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Игорь Константинов",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div><div class='star-o'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Ирина Иванова",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star-o'></div><div class='star-o'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Екатерина Романова",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Игорь Константинов",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div><div class='star-o'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Ирина Иванова",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star-o'></div><div class='star-o'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Екатерина Романова",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Игорь Константинов",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div><div class='star-o'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Ирина Иванова",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star-o'></div><div class='star-o'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Екатерина Романова",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Игорь Константинов",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star'></div><div class='star-o'></div>"
+             })           
+           </div><!--col-->
+           <div class="reviews__list-col">
+             @@include('var/_reviews__item.html',{
+               "name":"Ирина Иванова",
+               "stars": "<div class='star'></div><div class='star'></div><div class='star'></div><div class='star-o'></div><div class='star-o'></div>"
+             })           
+           </div><!--col-->
+         </div><!--reviews__list-->
+
+         <div class="reviews__form-w">
+          <h3 class="h3">ДОбавить отзыв</h3>
+          <form class="reviews__form">
+            <div class="reviews__inputs">
+              <input class="reviews__input" type="text" placeholder="Ваше имя" required />
+              <input class="reviews__input" type="text" placeholder="Ваша почта" required />
+              <input class="reviews__input" type="text" placeholder="Ваш телефон" required />
+            </div>
+            <textarea class="reviews__textarea" placeholder="Ваш отзыв"></textarea>
+            <div class="reviews__actions">
+              <button class="reviews__btn">ОТПРАВИТЬ</button>
+              <div class="reviews__rating-w">
+                <div class="reviews__rating-cap">Выберите рейтинг</div>
+                <div class="rating__item">
+                  <div class="rating__stars" data-result-value="0">
+                    <div class="rating__star" data-star-value="5"></div>
+                    <div class="rating__star" data-star-value="4"></div>
+                    <div class="rating__star" data-star-value="3"></div>
+                    <div class="rating__star" data-star-value="2"></div>
+                    <div class="rating__star" data-star-value="1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+
+
+
+    </div><!--reviews-page-->
+
+
+
+  </main>
+  @@include('var/_footer.html')
+</div>
+
+<!--wrapper-->
+
+@@include('var/_scripts.html')
+</body>
+</html>
+
