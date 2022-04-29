@@ -237,13 +237,13 @@ function scheme() {
 
 
 jQuery(window).scroll(function() {
-    let wrap1 = $('.scheme');
-    let elem1 = $('.scheme__num');
-    var scroll_sticky1 = wrap1.offset().top;       
-    if ( $(this).scrollTop() > scroll_sticky1 - (wrap1.height()*2) ) {
-      elem1.addClass("_show");
-      scheme();
-    }
+  let wrap1 = $('.scheme');
+  let elem1 = $('.scheme__num');
+  var scroll_sticky1 = wrap1.offset().top;       
+  if ( $(this).scrollTop() > scroll_sticky1 - (wrap1.height()*2) ) {
+    elem1.addClass("_show");
+    scheme();
+  }
 });
 
 
@@ -251,6 +251,20 @@ $('.rating__star').click(function () {
   let starValue = $(this).attr('data-star-value');
   $(this).parent().attr('data-result-value', starValue);
 });
+
+
+function tabs(element) {    
+  $(element).find('.tabs__list-item').click(function () {
+    $(element).find('.tabs__list-item').removeClass('active');
+    $(this).addClass('active');    
+    let num = $(this).index();
+    $(element).find('.tabs__content-list-item').removeClass('active');
+    $(element).find('.tabs__content-list-item').eq(num).addClass('active');    
+  });
+}
+
+
+tabs('.complect__tabs');
 
 
 }); //ready

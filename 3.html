@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог</title>
+  @@include('var/_styless.html')
+</head>
+
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')
+    <main class="main">
+
+      <div class="catalog-page">
+        <div class="filter">
+          <div class="contain">
+            <h1 class="h1">Каталог продукции</h1>
+          </div>
+        </div><!--gfilter-->
+        <div class="catalog">
+          <div class="contain">
+            <h2 class="h3">Дома 3х6</h2>
+            <div class="catalog__row">
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects1.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects2.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects3.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects4.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects1.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects2.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects3.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects4.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects1.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects2.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects3.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects4.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects1.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects2.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects3.png"
+                })
+              </div>
+              <div class="catalog__col">
+                @@include('var/_projects__item.html',{
+                  "img": "projects4.png"
+                })
+              </div>
+            </div>
+            <div class="catalog__more-btn-w">
+              <a href="#" class="catalog__more-btn btn">показать еще</a>
+            </div>
+          </div>
+        </div><!--catalog__row-->
+        @@include('var/_consform.html')
+        <div class="about-text">
+          <div class="contain">
+            <h3 class="h3">СЕО ТЕКСТ О КОМПАНИИ</h3>
+            <p>
+              Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. У нас есть свои проверенные специалисты. Они могут творить чудеса. Мы их уважаем и ценим. Но Вам их никто не будет навязывать – мы уважаем своих клиентов не меньше, чем наших мастеров;
+            Все материалы, мебель и декор в наших проектах существуют в реальности, и большая их часть закладывается на этапе проектирования; Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. </p>
+            <p>У нас есть свои проверенные специалисты. Они могут творить чудеса. Мы их уважаем и ценим. Но Вам их никто не будет навязывать – мы уважаем своих клиентов не меньше, чем наших мастеров. Все материалы, мебель и декор в наших проектах существуют в реальности, и большая их часть закладывается на этапе проектирования;Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. </p>
+          </div>
+        </div>
+      </div><!--catalog-page-->
+    </main>
+    @@include('var/_footer.html')
+  </div>
+  <!--wrapper-->
+  @@include('var/_scripts.html')
+</body>
+</html>
