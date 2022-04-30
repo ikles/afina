@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/jquery.countdown.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/select2.min.css">
   <link rel="stylesheet" href="css/main.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -104,11 +105,74 @@
     <main class="main">
 
       <div class="catalog-page">
-        <div class="filter">
+              <div class="gfilter">
           <div class="contain">
             <h1 class="h1">Каталог продукции</h1>
-          </div>
-        </div><!--gfilter-->
+
+            <div class="gfilter__w">
+              <form class="gfilter__form">
+               <div class="gfilter__col-1">
+                <div class="gfilter__lbl">Стоимость</div>
+                <div class="gfilter__price price">
+                <div class="gfilter__price-inn">
+                  <div class="price__range gfilter__range"></div>
+
+                  <div class="gfilter__labels">
+                    <span>от 1 м ₽</span>
+                    <span>до 10 м ₽</span>
+                  </div>
+
+                  <div class="price__inputs gfilter__inputs">
+                    <input class="gfilter__input" id="price-start" type="text" class="input">
+                    <input class="gfilter__input" id="price-end" type="text" class="input">
+                  </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="gfilter__row">     
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Площадь</div>
+                  <select class="select" name="square">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Этажность</div>
+                  <select class="select" name="floor">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Комнат</div>
+                  <select class="select" name="rooms">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Материалы</div>
+                  <select class="select" name="mat">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+              </div><!--filter__row-->
+              <div class="gfilter__col-last">
+                <a href="#" class="gfilter__more">Показать еще</a>
+                <button class="btn gfilter__btn">Найти дом</button>
+              </div>
+            </form>
+          </div><!--filter__w-->
+
+        </div>
+      </div><!--gfilter-->
         <div class="catalog">
           <div class="contain">
             <h2 class="h3">Дома 3х6</h2>
@@ -772,6 +836,9 @@
 <script src="js/jquery.countdown.js"></script>
 <script src="js/slick.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
+<script src="js/nouislider.js"></script>
+<script src="js/wNumb.min.js"></script>
+<script src="js/select2.min.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>

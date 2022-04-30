@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты</title>  
+  @@include('var/_styless.html')
+</head>
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')
+    <main class="main">
+
+      <div class="contacts__page content">
+        <div class="contain">
+          <h1 class="contacts__h1 h1">Контакты</h1>
+        </div><!--contain-->
+
+
+        <div class="loc">
+          <div class="contain">
+            <div class="loc__row">
+              <div class="loc__content">
+                <div class="loc__tit">Наше местонахождение</div>
+                <div class="loc__contacts">
+                  <div class="loc__contact">
+                    <div class="loc__img-w"><img src="img/loc-11.svg" /></div>
+                    <div class="loc__text">г. Санкт-Петербург, ул. Новгородская, дом 2</div>
+                  </div>
+                  <div class="loc__contact">
+                    <div class="loc__img-w"><img src="img/loc-2.svg" /></div>
+                    <div class="loc__text">
+                      Режим работы <br />
+                      <span class="loc__b">Пн-Вс 9:00 — 20:00</span>
+                    </div>
+                  </div>
+                  <div class="loc__contact">
+                    <div class="loc__img-w"><img src="img/loc-3.svg" /></div>
+                    <a href="tel:+7 952 234-65-35" class="loc__phone">+7 952 234-65-35</a>
+                  </div>
+                </div>
+                <a href="#" class="btn loc__btn">написать нам </a>                
+              </div>
+              <div class="loc__geo"><img src="img/geo.svg" class="" /></div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div><!--page-->
+
+
+
+    </main>
+    @@include('var/_footer.html')
+  </div>
+
+  <!--wrapper-->
+
+  @@include('var/_scripts.html')
+</body>
+</html>
+

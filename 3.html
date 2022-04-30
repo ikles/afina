@@ -17,116 +17,181 @@
     <main class="main">
 
       <div class="catalog-page">
-        <div class="filter">
+        <div class="gfilter">
           <div class="contain">
             <h1 class="h1">Каталог продукции</h1>
-          </div>
-        </div><!--gfilter-->
-        <div class="catalog">
-          <div class="contain">
-            <h2 class="h3">Дома 3х6</h2>
-            <div class="catalog__row">
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects1.png"
-                })
+
+            <div class="gfilter__w">
+              <form class="gfilter__form">
+               <div class="gfilter__col-1">
+                <div class="gfilter__lbl">Стоимость</div>
+                <div class="gfilter__price price">
+                  <div class="gfilter__price-inn">
+                    <div class="price__range gfilter__range"></div>
+
+                    <div class="gfilter__labels">
+                      <span>от 1 м ₽</span>
+                      <span>до 10 м ₽</span>
+                    </div>
+
+                    <div class="price__inputs gfilter__inputs">
+                      <input class="gfilter__input" id="price-start" type="text" class="input">
+                      <input class="gfilter__input" id="price-end" type="text" class="input">
+                    </div>
+                  </div>
+
+                </div>
               </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects2.png"
-                })
+              <div class="gfilter__row">     
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Площадь</div>
+                  <select class="select" name="square">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Этажность</div>
+                  <select class="select" name="floor">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Комнат</div>
+                  <select class="select" name="rooms">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Материалы</div>
+                  <select class="select" name="mat">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+              </div><!--filter__row-->
+              <div class="gfilter__col-last">
+               <div class="gfilter__more-w">
+                <a href="#" class="gfilter__more">Показать еще</a>
               </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects3.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects4.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects1.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects2.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects3.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects4.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects1.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects2.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects3.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects4.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects1.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects2.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects3.png"
-                })
-              </div>
-              <div class="catalog__col">
-                @@include('var/_projects__item.html',{
-                  "img": "projects4.png"
-                })
-              </div>
+              <button class="btn gfilter__btn">Найти дом</button>
             </div>
-            <div class="catalog__more-btn-w">
-              <a href="#" class="catalog__more-btn btn">показать еще</a>
-            </div>
+          </form>
+        </div><!--filter__w-->
+
+      </div>
+    </div><!--gfilter-->
+    <div class="catalog">
+      <div class="contain">
+        <h2 class="catalog__h3 h3">Дома 3х6</h2>
+        <div class="catalog__row">
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects1.png"
+            })
           </div>
-        </div><!--catalog__row-->
-        @@include('var/_consform.html')
-        <div class="about-text">
-          <div class="contain">
-            <h3 class="h3">СЕО ТЕКСТ О КОМПАНИИ</h3>
-            <p>
-              Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. У нас есть свои проверенные специалисты. Они могут творить чудеса. Мы их уважаем и ценим. Но Вам их никто не будет навязывать – мы уважаем своих клиентов не меньше, чем наших мастеров;
-            Все материалы, мебель и декор в наших проектах существуют в реальности, и большая их часть закладывается на этапе проектирования; Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. </p>
-            <p>У нас есть свои проверенные специалисты. Они могут творить чудеса. Мы их уважаем и ценим. Но Вам их никто не будет навязывать – мы уважаем своих клиентов не меньше, чем наших мастеров. Все материалы, мебель и декор в наших проектах существуют в реальности, и большая их часть закладывается на этапе проектирования;Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. </p>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects2.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects3.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects4.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects1.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects2.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects3.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects4.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects1.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects2.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects3.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects4.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects1.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects2.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects3.png"
+            })
+          </div>
+          <div class="catalog__col">
+            @@include('var/_projects__item.html',{
+              "img": "projects4.png"
+            })
           </div>
         </div>
-      </div><!--catalog-page-->
-    </main>
-    @@include('var/_footer.html')
-  </div>
-  <!--wrapper-->
-  @@include('var/_scripts.html')
+        <div class="catalog__more-btn-w">
+          <a href="#" class="catalog__more-btn btn">показать еще</a>
+        </div>
+      </div>
+    </div><!--catalog__row-->
+    @@include('var/_consform.html')
+    <div class="about-text">
+      <div class="contain">
+        <h3 class="h3">СЕО ТЕКСТ О КОМПАНИИ</h3>
+        <p>
+          Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. У нас есть свои проверенные специалисты. Они могут творить чудеса. Мы их уважаем и ценим. Но Вам их никто не будет навязывать – мы уважаем своих клиентов не меньше, чем наших мастеров;
+        Все материалы, мебель и декор в наших проектах существуют в реальности, и большая их часть закладывается на этапе проектирования; Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. </p>
+        <p>У нас есть свои проверенные специалисты. Они могут творить чудеса. Мы их уважаем и ценим. Но Вам их никто не будет навязывать – мы уважаем своих клиентов не меньше, чем наших мастеров. Все материалы, мебель и декор в наших проектах существуют в реальности, и большая их часть закладывается на этапе проектирования;Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. </p>
+      </div>
+    </div>
+  </div><!--catalog-page-->
+</main>
+@@include('var/_footer.html')
+</div>
+<!--wrapper-->
+@@include('var/_scripts.html')
 </body>
 </html>

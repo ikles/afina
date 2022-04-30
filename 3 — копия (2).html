@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог</title>
+  @@include('var/_styless.html')
+</head>
+
+<body>
+
+  <div class="wrapper">
+    @@include('var/_header.html')
+    <main class="main">
+
+      <div class="catalog-page">
+        <div class="gfilter">
+          <div class="contain">
+            <h1 class="h1">Каталог продукции</h1>
+
+            <div class="gfilter__w">
+              <form class="gfilter__form">
+               <div class="gfilter__col-1">
+                <div class="gfilter__lbl">Стоимость</div>
+                <div class="gfilter__price price">
+                <div class="gfilter__price-inn">
+                  <div class="price__range gfilter__range"></div>
+
+                  <div class="gfilter__labels">
+                    <span>от 1 м ₽</span>
+                    <span>до 10 м ₽</span>
+                  </div>
+
+                  <div class="price__inputs gfilter__inputs">
+                    <input class="gfilter__input" id="price-start" type="text" class="input">
+                    <input class="gfilter__input" id="price-end" type="text" class="input">
+                  </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="gfilter__row">     
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Площадь</div>
+                  <select class="select" name="square">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Этажность</div>
+                  <select class="select" name="floor">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Комнат</div>
+                  <select class="select" name="rooms">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Материалы</div>
+                  <select class="select" name="mat">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+              </div><!--filter__row-->
+              <div class="gfilter__col-last">
+                <a href="#" class="gfilter__more">Показать еще</a>
+                <button class="btn gfilter__btn">Найти дом</button>
+              </div>
+            </form>
+          </div><!--filter__w-->
+
+        </div>
+      </div><!--gfilter-->
+
+    </div><!--catalog-page-->
+  </main>
+  @@include('var/_footer.html')
+</div>
+<!--wrapper-->
+@@include('var/_scripts.html')
+</body>
+</html>

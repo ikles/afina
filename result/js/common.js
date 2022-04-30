@@ -1,3 +1,62 @@
+//RANGE
+const priceSlider = document.querySelector('.price__range');
+if (priceSlider) {
+
+  //let textFrom = priceSlider.getAttribute('data-from');
+  let textTo = priceSlider.getAttribute('data-to');
+
+  noUiSlider.create(priceSlider, {
+    start: [1, 10],
+    connect: true,
+    tooltips: [wNumb({ decimals: 0, prefix: 'от ', postfix: ' м ₽'}), wNumb({ decimals: 0, prefix: 'до ', postfix: ' м ₽' })],
+    range: {
+      'min': [1],
+      'max': [10]
+    },
+    format: {
+        to: (v) => parseFloat(v).toFixed(0),
+        from: (v) => parseFloat(v).toFixed(0)
+    }    
+  });
+
+  
+  const priceStart = document.getElementById('price-start');
+  const priceEnd = document.getElementById('price-end');
+  priceStart.addEventListener('change', setPriceValues);
+  priceEnd.addEventListener('change', setPriceValues);
+  
+
+
+
+//Значения из ползунков в инпуты
+priceSlider.noUiSlider.on('update', function(values, handle) {
+  priceStart.value = +priceSlider.noUiSlider.get()[0];
+  priceEnd.value = +priceSlider.noUiSlider.get()[1];    
+});
+
+
+
+ function setPriceValues() {
+
+
+
+  let priceStartValue;
+  let priceEndValue;
+  if (priceStart.value != '') {
+    priceStartValue = priceStart.value;
+  }
+  if (priceEnd.value != '') {
+    priceEndValue = priceEnd.value;
+  }
+  priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
+
+
+  } //spV
+
+
+}// if priceSlider
+
+
 jQuery(document).ready(function( $ ) {
 
   $(".toggle-mnu").click(function() {
@@ -129,7 +188,6 @@ $('.eye-3').click(function (e) {
   let pg = parseInt(document.location.pathname.match(/\d+/));
   $('body.active').css('background-image', "url('../img/"+pg+".jpg')");
   $('body:not(.active)').css('background-image', "unset");
-
 });*/
 
 /************************************/
@@ -157,8 +215,12 @@ function popup(openLink, windowEl, closeEl) {
   
 }
 
-popup('.link2', '.modal-overlay_2', '.modal-close_2');
-popup('.link', '.modal-overlay_1', '.modal-close_1');
+popup('.loc__btn', '.modal-overlay_2', '.modal-close_2');
+popup('.footer__write-us', '.modal-overlay_2', '.modal-close_2');
+popup('.exam__btn-2', '.modal-overlay_2', '.modal-close_2');
+
+popup('.exam__btn', '.modal-overlay_1', '.modal-close_1');
+popup('.prices__btn', '.modal-overlay_1', '.modal-close_1');
 
 
 $('a[href*=\\#]:not([href=\\#])').click(function () {
@@ -201,6 +263,34 @@ $('[data-fancybox="gallery1"]').fancybox({
 });
 
 $('[data-fancybox="gallery2"]').fancybox({
+  arrows: true,
+  infobar: false,
+  smallBtn: true,
+  toolbar: false,
+  iframe : {
+    css : {
+      width : '950px'
+    }
+  },    
+  slideClass: "myClass",
+  baseClass: "myclass"
+});
+
+$('[data-fancybox="gallery3"]').fancybox({
+  arrows: true,
+  infobar: false,
+  smallBtn: true,
+  toolbar: false,
+  iframe : {
+    css : {
+      width : '950px'
+    }
+  },    
+  slideClass: "myClass",
+  baseClass: "myclass"
+});
+
+$('[data-fancybox="gallery4"]').fancybox({
   arrows: true,
   infobar: false,
   smallBtn: true,
@@ -268,4 +358,9 @@ tabs('.complect__tabs');
 
 
 }); //ready
+
+
+
+
+
 

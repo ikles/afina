@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/jquery.countdown.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/select2.min.css">
   <link rel="stylesheet" href="css/main.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -98,6 +99,11 @@
             <a href="tel:+7 952 234-65-35" class="header__phone">
               +7 952 234-65-35
             </a>
+            <div class="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </header>  
@@ -1028,12 +1034,48 @@
 
     <!--wrapper-->
 
+        <div class="modal-overlay modal-overlay_1">        
+      <div class="modal-form__layout"></div>
+      <div class="modal-form__block">     
+        <div class="modal-form__inner">
+          <span class="modal-close modal-close_1">X</span>
+          <div class="modal__title">Заказать звонок</div>
+          <form class="modal-form">
+            <input class="modal-form__input" type="text" placeholder="Ваше имя" required name="name">
+            <input class="modal-form__input" type="text" placeholder="Ваше имя" required name="phone">
+            <button class="modal-form__btn btn">ОТПРАВИТЬ</button>
+          </form>
+        </div>
+      </div>
+    </div><!--modal-overlay-->
+
+    <div class="modal-overlay modal-overlay_2">      
+      <div class="modal-form__layout"></div>
+      <div class="modal-form__block">     
+        <div class="modal-form__inner">
+          <span class="modal-close modal-close_2">X</span>
+          <div class="modal__title">Задать вопрос</div>
+          <form class="modal-form">
+            <input class="modal-form__input" type="text" placeholder="Ваше имя" required name="name">
+            <input class="modal-form__input" type="text" placeholder="Ваше имя" required name="phone">
+            <textarea class="modal-form__area" placeholder="Ваше сообщение">
+              
+            </textarea>
+            <button class="modal-form__btn btn">ОТПРАВИТЬ</button>
+          </form>          
+        </div>
+      </div>
+    </div><!--modal-overlay-->
+
     <script src="js/jquery-3.4.1.min.js"></script>      
-<script src="js/jquery.maskedinput.min.js"></script>      
-<script src="js/jquery.countdown.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/common.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>      
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/nouislider.js"></script>
+    <script src="js/wNumb.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 
   </html>

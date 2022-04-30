@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/jquery.countdown.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/select2.min.css">
   <link rel="stylesheet" href="css/main.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -98,540 +99,610 @@
             <a href="tel:+7 952 234-65-35" class="header__phone">
               +7 952 234-65-35
             </a>
+            <div class="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </header>  
     <main class="main">
 
       <div class="catalog-page">
-        <div class="filter">
+        <div class="gfilter">
           <div class="contain">
             <h1 class="h1">Каталог продукции</h1>
-          </div>
-        </div><!--gfilter-->
-        <div class="catalog">
-          <div class="contain">
-            <h2 class="h3">Дома 3х6</h2>
-            <div class="catalog__row">
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects1.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
+
+            <div class="gfilter__w">
+              <form class="gfilter__form">
+               <div class="gfilter__col-1">
+                <div class="gfilter__lbl">Стоимость</div>
+                <div class="gfilter__price price">
+                  <div class="gfilter__price-inn">
+                    <div class="price__range gfilter__range"></div>
+
+                    <div class="gfilter__labels">
+                      <span>от 1 м ₽</span>
+                      <span>до 10 м ₽</span>
+                    </div>
+
+                    <div class="price__inputs gfilter__inputs">
+                      <input class="gfilter__input" id="price-start" type="text" class="input">
+                      <input class="gfilter__input" id="price-end" type="text" class="input">
+                    </div>
+                  </div>
+
+                </div>
               </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects2.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
+              <div class="gfilter__row">     
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Площадь</div>
+                  <select class="select" name="square">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Этажность</div>
+                  <select class="select" name="floor">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Комнат</div>
+                  <select class="select" name="rooms">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+                <div class="gfilter__col">
+                  <div class="gfilter__lbl">Материалы</div>
+                  <select class="select" name="mat">
+                    <option value="8х14">8х14</option>
+                    <option value="9х19">9х19</option>
+                    <option value="10х16">10х16</option>
+                  </select>
+                </div><!--filter__col-->
+              </div><!--filter__row-->
+              <div class="gfilter__col-last">
+               <div class="gfilter__more-w">
+                <a href="#" class="gfilter__more">Показать еще</a>
               </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects3.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects4.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects1.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects2.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects3.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects4.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects1.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects2.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects3.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects4.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects1.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects2.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects3.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
-              <div class="catalog__col">
-                <a href="#" class="projects__item">
-  <div class="projects__img-w">
-    <img src="img/projects4.png" />
-  </div>
-  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
-  <div class="projects__tbl">
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Общая площадь дома:</div>
-      <div class="projects__tbl-col-2">126 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Площадь террасы:</div>
-      <div class="projects__tbl-col-2">70,5 м2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Этажность:</div>
-      <div class="projects__tbl-col-2">2</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Материал:</div>
-      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
-    </div>
-    <div class="projects__tbl-row">
-      <div class="projects__tbl-col-1">Фундамент:</div>
-      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
-    </div>
-  </div>
-  <div class="projects__price">ОТ 2 900 000 ₽</div>
-  <div class="projects__arrow"></div>
-</a>
-              </div>
+              <button class="btn gfilter__btn">Найти дом</button>
             </div>
-            <div class="catalog__more-btn-w">
-              <a href="#" class="catalog__more-btn btn">показать еще</a>
-            </div>
+          </form>
+        </div><!--filter__w-->
+
+      </div>
+    </div><!--gfilter-->
+    <div class="catalog">
+      <div class="contain">
+        <h2 class="catalog__h3 h3">Дома 3х6</h2>
+        <div class="catalog__row">
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects1.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
           </div>
-        </div><!--catalog__row-->
-                <div class="consform">
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects2.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects3.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects4.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects1.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects2.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects3.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects4.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects1.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects2.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects3.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects4.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects1.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects2.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects3.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+          <div class="catalog__col">
+            <a href="#" class="projects__item">
+  <div class="projects__img-w">
+    <img src="img/projects4.png" />
+  </div>
+  <div class="projects__title">НАЗВАНИЕ ПРОЕКТА</div>
+  <div class="projects__tbl">
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Общая площадь дома:</div>
+      <div class="projects__tbl-col-2">126 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Площадь террасы:</div>
+      <div class="projects__tbl-col-2">70,5 м2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Этажность:</div>
+      <div class="projects__tbl-col-2">2</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Материал:</div>
+      <div class="projects__tbl-col-2">Клееный брус сорт «А»</div>
+    </div>
+    <div class="projects__tbl-row">
+      <div class="projects__tbl-col-1">Фундамент:</div>
+      <div class="projects__tbl-col-2">Монолитная Ж/Б плита</div>
+    </div>
+  </div>
+  <div class="projects__price">ОТ 2 900 000 ₽</div>
+  <div class="projects__arrow"></div>
+</a>
+          </div>
+        </div>
+        <div class="catalog__more-btn-w">
+          <a href="#" class="catalog__more-btn btn">показать еще</a>
+        </div>
+      </div>
+    </div><!--catalog__row-->
+            <div class="consform">
           <div class="contain">
             <div class="consform__row">
               <div class="consform__w">
@@ -655,18 +726,18 @@
             </div>
           </div>
         </div>
-        <div class="about-text">
-          <div class="contain">
-            <h3 class="h3">СЕО ТЕКСТ О КОМПАНИИ</h3>
-            <p>
-              Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. У нас есть свои проверенные специалисты. Они могут творить чудеса. Мы их уважаем и ценим. Но Вам их никто не будет навязывать – мы уважаем своих клиентов не меньше, чем наших мастеров;
-            Все материалы, мебель и декор в наших проектах существуют в реальности, и большая их часть закладывается на этапе проектирования; Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. </p>
-            <p>У нас есть свои проверенные специалисты. Они могут творить чудеса. Мы их уважаем и ценим. Но Вам их никто не будет навязывать – мы уважаем своих клиентов не меньше, чем наших мастеров. Все материалы, мебель и декор в наших проектах существуют в реальности, и большая их часть закладывается на этапе проектирования;Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. </p>
-          </div>
-        </div>
-      </div><!--catalog-page-->
-    </main>
-    <footer class="footer">
+    <div class="about-text">
+      <div class="contain">
+        <h3 class="h3">СЕО ТЕКСТ О КОМПАНИИ</h3>
+        <p>
+          Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. У нас есть свои проверенные специалисты. Они могут творить чудеса. Мы их уважаем и ценим. Но Вам их никто не будет навязывать – мы уважаем своих клиентов не меньше, чем наших мастеров;
+        Все материалы, мебель и декор в наших проектах существуют в реальности, и большая их часть закладывается на этапе проектирования; Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. </p>
+        <p>У нас есть свои проверенные специалисты. Они могут творить чудеса. Мы их уважаем и ценим. Но Вам их никто не будет навязывать – мы уважаем своих клиентов не меньше, чем наших мастеров. Все материалы, мебель и декор в наших проектах существуют в реальности, и большая их часть закладывается на этапе проектирования;Каждый год в нашей сфере появляются новые материалы, приёмы и технологии. Мы погружаемся в тему, находим нужных специалистов и реализуем. Мы знаем свою работу до мелочей. Нас не пугают нестандартные ситуации – мы спокойно их решаем. У нас все продумано. К нам постоянно обращаются по рекомендациям – репутация для нас самое важное. </p>
+      </div>
+    </div>
+  </div><!--catalog-page-->
+</main>
+<footer class="footer">
   <div class="contain">
     <div class="footer__row-1">
       <a href="index.html" class="footer__logo"><img src="img/logo-f.svg" class="footer__logo-img" /></a><a href="#" class="footer__write-us">Написать нам </a>
@@ -765,13 +836,49 @@
     </div>
   </div>
 </footer>
-  </div>
-  <!--wrapper-->
-  <script src="js/jquery-3.4.1.min.js"></script>      
-<script src="js/jquery.maskedinput.min.js"></script>      
-<script src="js/jquery.countdown.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/common.js"></script>
+</div>
+<!--wrapper-->
+    <div class="modal-overlay modal-overlay_1">        
+      <div class="modal-form__layout"></div>
+      <div class="modal-form__block">     
+        <div class="modal-form__inner">
+          <span class="modal-close modal-close_1">X</span>
+          <div class="modal__title">Заказать звонок</div>
+          <form class="modal-form">
+            <input class="modal-form__input" type="text" placeholder="Ваше имя" required name="name">
+            <input class="modal-form__input" type="text" placeholder="Ваше имя" required name="phone">
+            <button class="modal-form__btn btn">ОТПРАВИТЬ</button>
+          </form>
+        </div>
+      </div>
+    </div><!--modal-overlay-->
+
+    <div class="modal-overlay modal-overlay_2">      
+      <div class="modal-form__layout"></div>
+      <div class="modal-form__block">     
+        <div class="modal-form__inner">
+          <span class="modal-close modal-close_2">X</span>
+          <div class="modal__title">Задать вопрос</div>
+          <form class="modal-form">
+            <input class="modal-form__input" type="text" placeholder="Ваше имя" required name="name">
+            <input class="modal-form__input" type="text" placeholder="Ваше имя" required name="phone">
+            <textarea class="modal-form__area" placeholder="Ваше сообщение">
+              
+            </textarea>
+            <button class="modal-form__btn btn">ОТПРАВИТЬ</button>
+          </form>          
+        </div>
+      </div>
+    </div><!--modal-overlay-->
+
+    <script src="js/jquery-3.4.1.min.js"></script>      
+    <script src="js/jquery.maskedinput.min.js"></script>      
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/nouislider.js"></script>
+    <script src="js/wNumb.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>
