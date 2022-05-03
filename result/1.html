@@ -35,62 +35,62 @@
             </a>
             <nav class="menu">
               <ul class="menu__list">
-                <li>
-                  <a href="#" class="menu__link" href="">Проектирование</a>
+                <li class="li-parent">
+                  <a href="#" class="menu__link">Проектирование</a>
                   <span class="menu__arrow menu-arrow"></span>
                   <ul class="sub-menu__list">
                     <li>
-                      <a href="#" class="sub-menu__link" href="">Строительство домов</a>           
+                      <a href="#" class="sub-menu__link">Строительство домов</a>           
                     </li>
                     <li>
-                      <a href="#" class="sub-menu__link" href="">Ремонт домов</a>
+                      <a href="#" class="sub-menu__link">Ремонт домов</a>
                     </li>
-                    <li>
-                      <a href="#" class="sub-menu__link" href="">Внутренняя отделка</a>
+                    <li class="li-parent">
+                      <a href="#" class="sub-menu__link">Внутренняя отделка</a>
                       <span class="sub-menu__arrow menu-arrow"></span>
                       <ul class="sub-sub-menu__list">
                         <li>
-                          <a href="#" class="sub-sub-menu__link" href="">Ремонтная отделка</a>
+                          <a href="#" class="sub-sub-menu__link">Ремонтная отделка</a>
                         </li>
                         <li>
-                          <a href="#" class="sub-sub-menu__link" href="">Фасадный ремонт</a>
+                          <a href="#" class="sub-sub-menu__link">Фасадный ремонт</a>
                         </li>
                         <li>
-                          <a href="#" class="sub-sub-menu__link" href="">Потолок</a>
+                          <a href="#" class="sub-sub-menu__link">Потолок</a>
                         </li>
                         <li>
-                          <a href="#" class="sub-sub-menu__link" href="">Стены</a>
+                          <a href="#" class="sub-sub-menu__link">Стены</a>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="sub-menu__link" href="">Ремонт квартир</a>
+                      <a href="#" class="sub-menu__link">Ремонт квартир</a>
                     </li>
                     <li>
-                      <a href="#" class="sub-menu__link" href="">Новости</a>
+                      <a href="#" class="sub-menu__link">Новости</a>
                     </li>
                     <li>
-                      <a href="#" class="sub-menu__link" href="">Отзывы</a>
+                      <a href="#" class="sub-menu__link">Отзывы</a>
                     </li>
                     <li>
-                      <a href="#" class="sub-menu__link" href="">контакты</a>
+                      <a href="#" class="sub-menu__link">контакты</a>
                     </li>     
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="menu__link" href="">Строительство</a>
+                  <a href="#" class="menu__link">Строительство</a>
                 </li>
                 <li>
-                  <a href="#" class="menu__link" href="">Отделка</a>
+                  <a href="#" class="menu__link">Отделка</a>
                 </li>
                 <li>
-                  <a href="#" class="menu__link" href="">Галерея</a>
+                  <a href="#" class="menu__link">Галерея</a>
                 </li>
                 <li>
-                  <a href="#" class="menu__link" href="">Отзывы</a>
+                  <a href="#" class="menu__link">Отзывы</a>
                 </li>
                 <li>
-                  <a href="#" class="menu__link" href="">КОнтакты</a>
+                  <a href="#" class="menu__link">КОнтакты</a>
                 </li>              
               </ul>
             </nav>
@@ -107,7 +107,7 @@
       </header>    
     <main class="main">
       <div class="banner">
-        <img src="img/banner.jpg" class="banner__img" />
+        <!-- <img src="img/banner.jpg" class="banner__img" /> -->
         <div class="banner__content">
           <div class="banner__contain contain">
             <div class="banner__row">
@@ -612,7 +612,7 @@
 </div>
 <div class="vgallery">
   <div class="contain">
-    <div class="vgallery__row">
+    <div class="vgallery__row vgallery__row--head">
       <div class="vgallery__col">
         <div class="vgallery__heading-w">
           <div class="vgallery__heading">Видео</div>
@@ -620,7 +620,7 @@
         </div>
       </div>
       <div class="vgallery__col">
-        <div class="vgallery__heading-w">
+        <div class="vgallery__heading-w hide-991">
           <div class="vgallery__heading">Галерея</div>
           <a href="#" class="vgallery__heading-link">Подивитись все</a>
         </div>
@@ -639,7 +639,10 @@
         </a>
       </div>
       <div class="vgallery__col">
-
+ <div class="vgallery__heading-w show-991">
+          <div class="vgallery__heading">Галерея</div>
+          <a href="#" class="vgallery__heading-link">Подивитись все</a>
+        </div>
         <div class="vgallery__gal-row">
           <div class="vgallery__gal-col">
             <a data-fancybox="gallery" href="img/gal1.jpg" class="vgallery__gal-1"><img src="img/gal1.jpg" class="vgallery__gal-img" /></a>
@@ -913,6 +916,7 @@
     </div>
   </div>
 </footer>
+<div class="overlay"></div>
 </div>
 
 <!--wrapper-->

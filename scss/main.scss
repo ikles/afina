@@ -89,6 +89,18 @@ body {
   display: none;
 }
 
+.overlay {
+  opacity: 0.8;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
 .lcpadding {
   padding-left: calc((100% - 1280px)/2);    
   @media only screen and (max-width : 1199px) {
@@ -306,7 +318,7 @@ text-transform: uppercase;
     position: relative;
   }
   a.parent {
-    margin-right: 25px;
+    
   }
 }
 .menu__list {
@@ -325,6 +337,9 @@ text-transform: uppercase;
   color: #1D384B;
   &:hover {    
     text-decoration: none;
+  }
+  &.parent {
+
   }
 }
 .sub-menu__list {
@@ -378,27 +393,27 @@ text-transform: uppercase;
   }
 }
 
+
+
 .menu__arrow {}
 .menu-arrow {
   display: none;
   width: 0;
   height: 0;  
-  border-top: 10px solid #000;
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
-  position: absolute;
-  right: 0;
-  top: calc(50% - 5px);
+  background: url("../img/mnu-arrow.svg") $nr center;  
+  background-size: cover;
+  width: 14px;
+  height: 7px;
+  position: absolute;  
+  left: 20px;
+  top: calc(50% - 5px);  
   &.active {
     transform: rotate(180deg);
   }
 }
 
 .sub-menu__arrow {
-  border-top: 10px solid transparent;
-  border-left: 10px solid #fff;
-  border-right: none;
-  border-bottom: 10px solid transparent;
+  
 }
 
 body {
@@ -423,7 +438,7 @@ body {
   }
   &.touch {
     .menu-arrow {
-      display: block;
+      
     }
     .sub-menu__list.open {
       display: block;
@@ -445,9 +460,7 @@ body {
     position: static;
   }
   .sub-menu__arrow {
-    border-top: 10px solid #fff;
-    border-right: 10px solid transparent;
-    border-left: 10px solid transparent;  
+    
   }
   .menu-arrow {
     top: 0px;
@@ -468,7 +481,9 @@ body {
 
 
 .header {
-  background: rgb(246, 249, 252);  
+  background: rgb(246, 249, 252); 
+  position: relative;
+  z-index: 30; 
 }
 
 
@@ -528,6 +543,8 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  background: url("../img/banner.jpg") $nr center;  
+          background-size: cover;
   &:after {
     content: "";
     display: block;
@@ -913,7 +930,8 @@ opacity: 0.9;
   display: flex;  
   flex-direction: column;  
           justify-content: flex-end;
-  &:hover {
+  @media (any-hover: hover) {
+      &:hover {
     .stages__img-w {  
       height: 100%;
     }
@@ -933,6 +951,8 @@ opacity: 0.9;
       background-image: url("../img/arr-r-wh.svg");
     }    
   }
+  }
+
   &:before {
     position: absolute;
     bottom: 0;
@@ -1799,6 +1819,10 @@ transition: 0.5s;
   justify-content: center;
 }
 
+.show-991 {
+  display: none;
+}
+
 .scheme__num {
   width: 31px;
   height: 31px;
@@ -1811,6 +1835,7 @@ transition: 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 &.active {  
   background: #E78C04;  
 }
@@ -2624,8 +2649,7 @@ td {
             flex-grow: 1;
   }  
   &:nth-child(2) {
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 700;  
   text-transform: lowercase;
   color: rgb(255, 255, 255);
   text-align: right;
@@ -2899,9 +2923,7 @@ td .dots-2 {
 
 .proj__img {
   flex: 0 0 auto;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
 }
 
 .proj__content {
@@ -2929,15 +2951,14 @@ td .dots-2 {
   }
   td {
     padding-bottom: 14.1px;
+    font-size: 16px;
   &:nth-child(1) {    
             flex-grow: 1;
-    font-size: 16px;
   line-height: 1;
   color: rgb(87, 87, 87);
   }
   &:nth-child(2) {    
-            flex: none;
-  font-size: 16px;
+            flex: none;  
   line-height: 1;
   color: rgb(87, 87, 87);
   text-align: right;
@@ -3090,7 +3111,8 @@ backdrop-filter: blur(12px);
 
 
 .consform__w {
-  width: 653px;
+  width: 653px;  
+          flex: none;
    padding-top: 85px;
   padding-bottom: 68px;
 }
@@ -3601,6 +3623,7 @@ padding: 0 27px;
 font-weight: 700;
 font-size: 16px;
 color: #FFFFFF;
+width: auto;
 display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -3900,19 +3923,32 @@ margin: 0 -24px;
   
 }
 
+.map {
+  height: 576px;
+  position: relative;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
 
-.loc {
-  padding-top: 70px;
-  padding-bottom: 65px;
-  background-image: url("../img/map.jpg");
-  background-repeat: no-repeat;
-  background-position: left top;
+.loc__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.loc { 
+position: relative; 
 }
 
 .contain {
 }
 
 .loc__row {
+  padding-top: 70px;
+  padding-bottom: 65px;  
   position: relative;
 }
 
@@ -3995,7 +4031,8 @@ margin: 0 -24px;
   height: 111px;
   position: absolute;
   top: 170px;
-  right: 450px;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 

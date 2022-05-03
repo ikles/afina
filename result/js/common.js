@@ -14,8 +14,8 @@ if (priceSlider) {
       'max': [10]
     },
     format: {
-        to: (v) => parseFloat(v).toFixed(0),
-        from: (v) => parseFloat(v).toFixed(0)
+      to: (v) => parseFloat(v).toFixed(0),
+      from: (v) => parseFloat(v).toFixed(0)
     }    
   });
 
@@ -36,7 +36,7 @@ priceSlider.noUiSlider.on('update', function(values, handle) {
 
 
 
- function setPriceValues() {
+function setPriceValues() {
 
 
 
@@ -59,21 +59,31 @@ priceSlider.noUiSlider.on('update', function(values, handle) {
 
 jQuery(document).ready(function( $ ) {
 
-  $(".toggle-mnu").click(function() {
+  $(".burger").click(function() {
     $(this).toggleClass("on");
-    $(".top-mnu").slideToggle();
+    $("nav.menu").slideToggle();
+    $('.overlay').fadeToggle();
     return false;
   });
 
+
+
+
   $('body').click(function () {
-    if( $(".toggle-mnu").hasClass("on") ){
-      $(".toggle-mnu").removeClass("on");
-      $(".top-mnu").fadeOut();
+    if( $(".burger").hasClass("on") ){
+      $(".burger").removeClass("on");
+      $("nav.menu").fadeOut();
+      $('.overlay').fadeOut();
     }
   });
 
+  $('.overlay').click(function () {
+    $(this).fadeOut();
+    $("nav.menu").fadeOut();
+  });
 
-  $(".top-mnu").click(function (e) {
+
+  $("nav.menu, .header").click(function (e) {
     e.stopPropagation();
   });
 
@@ -158,7 +168,27 @@ $('.projects__row').slick({
   cssEase: 'linear',
   autoplay: false,
   autoplaySpeed: 0,  
-  arrows: true,  
+  arrows: true,
+  responsive: [
+  {
+    breakpoint: 992,
+    settings: {
+      slidesToShow: 3
+    }
+  },
+  {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 2
+    }
+  },
+  {
+    breakpoint: 576,
+    settings: {
+      slidesToShow: 1
+    }
+  }
+  ]  
 });
 
 $('.reviews__slider').slick({
@@ -171,6 +201,21 @@ $('.reviews__slider').slick({
   autoplay: false,
   autoplaySpeed: 0,  
   arrows: true,  
+  responsive: [
+
+  {
+    breakpoint: 992,
+    settings: {
+      slidesToShow: 2
+    }
+  },
+  {
+    breakpoint: 576,
+    settings: {
+      slidesToShow: 1
+    }
+  }
+  ]  
 });
 
 
@@ -211,9 +256,9 @@ function popup(openLink, windowEl, closeEl) {
   });
   $('.modal-form__block').click(function (e) {
     e.stopPropagation();  
-  });
-  
+  });  
 }
+
 
 popup('.loc__btn', '.modal-overlay_2', '.modal-close_2');
 popup('.footer__write-us', '.modal-overlay_2', '.modal-close_2');

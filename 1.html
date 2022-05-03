@@ -14,7 +14,7 @@
     @@include('var/_header.html')  
     <main class="main">
       <div class="banner">
-        <img src="img/banner.jpg" class="banner__img" />
+        <!-- <img src="img/banner.jpg" class="banner__img" /> -->
         <div class="banner__content">
           <div class="banner__contain contain">
             <div class="banner__row">
@@ -309,7 +309,7 @@
 </div>
 <div class="vgallery">
   <div class="contain">
-    <div class="vgallery__row">
+    <div class="vgallery__row vgallery__row--head">
       <div class="vgallery__col">
         <div class="vgallery__heading-w">
           <div class="vgallery__heading">Видео</div>
@@ -317,7 +317,7 @@
         </div>
       </div>
       <div class="vgallery__col">
-        <div class="vgallery__heading-w">
+        <div class="vgallery__heading-w hide-991">
           <div class="vgallery__heading">Галерея</div>
           <a href="#" class="vgallery__heading-link">Подивитись все</a>
         </div>
@@ -336,7 +336,10 @@
         </a>
       </div>
       <div class="vgallery__col">
-
+ <div class="vgallery__heading-w show-991">
+          <div class="vgallery__heading">Галерея</div>
+          <a href="#" class="vgallery__heading-link">Подивитись все</a>
+        </div>
         <div class="vgallery__gal-row">
           <div class="vgallery__gal-col">
             <a data-fancybox="gallery" href="img/gal1.jpg" class="vgallery__gal-1"><img src="img/gal1.jpg" class="vgallery__gal-img" /></a>
